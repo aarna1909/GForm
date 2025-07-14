@@ -15,6 +15,10 @@ function validateName() {
     nameError.textContent = "Name must be at least 2 characters.";
     return false;
   }
+  if (/\d/.test(name)) {
+    nameError.textContent = "Name cannot contain numbers.";
+    return false;
+  }
   nameError.textContent = "";
   return true;
 }
